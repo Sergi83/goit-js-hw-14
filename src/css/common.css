@@ -22,3 +22,21 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+/* task-03 */
+.js-images-list {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.js-img {
+  display: block;
+  width: 100%;
+}
