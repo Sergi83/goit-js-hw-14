@@ -7,15 +7,19 @@
 // Оновлюй інтерфейс новим значенням змінної counterValue.
 
 let counterValue = 0;
+const counter = document.querySelector('#value');
 
-const counter = document.querySelector('#counter');
+const btns = document.querySelectorAll('button');
+btns.forEach(btn => {
+  btn.addEventListener('click', handleClick);
+});
 
-const btnIncrement = document.querySelector('button[data-action="increment"]');
-const btnDecrement = document.querySelector('button[data-action="decrement"]');
-
-btnIncrement.addEventListener('click', handlePlus1);
-btnDecrement.addEventListener('click', handleMinus1);
-
-function handlePlus1(evt) {}
-
-function handleMinus1(evt) {}
+function handleClick(evt) {
+  if (evt.currentTarget.textContent === '+1') {
+    counterValue += 1;
+  }
+  if (evt.currentTarget.textContent === '-1') {
+    counterValue -= 1;
+  }
+  return (counter.innerHTML = counterValue);
+}
